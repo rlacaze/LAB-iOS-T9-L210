@@ -12,13 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    //theme color
+    let themeColor = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         //apparence de la barre de navigation
         //UINavigationBar.appearance().barTintColor = UIColor(red: 205.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+ 
         
         //couleur bouton navigation
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()

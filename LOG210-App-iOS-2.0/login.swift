@@ -6,6 +6,7 @@
 //  Copyright © 2016 Romain LACAZE. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class login: UIViewController, UITextFieldDelegate {
@@ -20,6 +21,8 @@ class login: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
         
         //titre nav bar
         self.title = "identification"
@@ -55,9 +58,43 @@ class login: UIViewController, UITextFieldDelegate {
     }
 
     
+    
     //ACTION
     @IBAction func validation(sender: UIButton) {
-        
+       
+        checkingApi(identifiant.text!, password: password.text!)
         
     }
+    
+    func checkingApi(identifiant: String, password: String){
+        print("id=\(identifiant) : pass=\(password)")
+        
+        let headers = [
+            "cache-control": "no-cache",
+            "postman-token": "6b9b9816-6dae-aade-504a-9545ec1baef2"
+        ]
+        
+        var url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_user?email=\(identifiant)&password=\(password)")!
+       
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        
+        request.HTTPMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error)
+            } else {
+                let httpResponse = response as? NSHTTPURLResponse
+                var strData = NSString(data: data!, encoding: NSUTF8StringEncoding)!
+                print("Body: \(strData)")
+            }
+        })
+        
+        dataTask.resume()
+    }
+    
+    
+    
 }
