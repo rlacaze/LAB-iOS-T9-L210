@@ -25,7 +25,7 @@ class barcodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate, U
         
         //femre clavier
         //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(barcodeReader.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         //okButton.enabled = false
