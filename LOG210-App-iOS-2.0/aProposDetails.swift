@@ -1,5 +1,5 @@
 //
-//  aPropos.swift
+//  aProposDetails.swift
 //  LOG210-App-iOS-2.0
 //
 //  Created by Romain LACAZE on 2016-03-10.
@@ -8,16 +8,15 @@
 
 import UIKit
 
-class aPropos: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
-
+class aProposDetails: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
     
-    
+    var image = UIImage()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
+        self.imageView.image = self.image
         
     }
     
@@ -26,6 +25,4 @@ class aPropos: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewD
         // Dispose of any resources that can be recreated.
     }
 
-    
-    
 }
