@@ -76,12 +76,13 @@ class login: UIViewController, UITextFieldDelegate {
         if(loginApi() == true){
             if(selecter.on){
                 print("login with gestionnaire")
-                let vc: menuGestionnaire = storyboard.instantiateViewControllerWithIdentifier("newGestionnaire") as! menuGestionnaire
-                self.presentViewController(vc, animated:true, completion: nil)
+                let newGestionnaire = self.storyboard?.instantiateViewControllerWithIdentifier("newGestionnaire") as! menuGestionnaire
+                self.navigationController?.pushViewController(newGestionnaire, animated: true)
+                
             } else {
                 print("login with student")
-                let vc: viewList = storyboard.instantiateViewControllerWithIdentifier("newList") as! viewList
-                self.presentViewController(vc, animated:true, completion: nil)
+                let newList = self.storyboard?.instantiateViewControllerWithIdentifier("newList") as! viewList
+                self.navigationController?.pushViewController(newList, animated: true)
             }
             
         } else {
