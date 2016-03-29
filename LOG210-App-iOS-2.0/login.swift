@@ -14,21 +14,24 @@ class login: UIViewController, UITextFieldDelegate {
     //properties
     @IBOutlet weak var identifiant: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var Switch: UISwitch!
     @IBOutlet weak var validerButton: UIButton!
-    
+    @IBOutlet weak var labelFailed: UILabel!
+    @IBOutlet weak var selecter: UISwitch!
+
     //func
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        labelFailed.hidden = true
+
+
         
         //titre nav bar
         self.title = "identification"
         
         //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(login.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
     }
@@ -57,24 +60,49 @@ class login: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
 
-    
+    func loginApi() -> Bool{
+        let loginApi: Bool = checkingApi(identifiant.text!, password: password.text!)
+        print("login: \(loginApi)")
+        
+        return loginApi
+    }
     
     //ACTION
     @IBAction func validation(sender: UIButton) {
        
-        checkingApi(identifiant.text!, password: password.text!)
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        if(loginApi() == true){
+            if(selecter.on){
+                print("login with gestionnaire")
+                let vc: menuGestionnaire = storyboard.instantiateViewControllerWithIdentifier("newGestionnaire") as! menuGestionnaire
+                self.presentViewController(vc, animated:true, completion: nil)
+            } else {
+                print("login with student")
+                let vc: viewList = storyboard.instantiateViewControllerWithIdentifier("newList") as! viewList
+                self.presentViewController(vc, animated:true, completion: nil)
+            }
+            
+        } else {
+            print("login FAILED")
+            labelFailed.textColor = UIColor.redColor()
+            labelFailed.text = "Login FAILED"
+            labelFailed.hidden = false
+        }
         
     }
     
-    func checkingApi(identifiant: String, password: String){
+    func checkingApi(identifiant: String, password: String) -> Bool{
         print("id=\(identifiant) : pass=\(password)")
-        
+        var result: Bool = false
+    
         let headers = [
             "cache-control": "no-cache",
             "postman-token": "6b9b9816-6dae-aade-504a-9545ec1baef2"
         ]
         
-        var url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_user?email=\(identifiant)&password=\(password)")!
+        let url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_user?email=\(identifiant)&password=\(password)")!
        
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         
@@ -82,19 +110,28 @@ class login: UIViewController, UITextFieldDelegate {
         request.allHTTPHeaderFields = headers
         
         let session = NSURLSession.sharedSession()
+        
         let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
                 print(error)
             } else {
-                let httpResponse = response as? NSHTTPURLResponse
-                var strData = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-                print("Body: \(strData)")
+                //let httpResponse = response as? NSHTTPURLResponse
+                let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)!
+                //print("strData: \(strData)")
+                    if (strData == "true"){
+                        result = true
+                        //print("result1: \(result)")
+                    } else {
+                        result = false
+                }
             }
         })
         
+        
         dataTask.resume()
+        
+        sleep(2)
+        //usleep(500000)
+        return result
     }
-    
-    
-    
 }
