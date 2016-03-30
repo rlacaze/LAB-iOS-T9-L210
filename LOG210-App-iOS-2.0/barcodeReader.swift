@@ -12,25 +12,20 @@ import UIKit
 class barcodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UITextFieldDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
-    
-    @IBOutlet weak var okButton: UIButton!
-    @IBOutlet weak var labelResult: UITextField!
-    //@IBOutlet weak var labelResult: UILabel!
+    var idUser: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //titre nav bar
         self.title = "lecteur code-barre"
-        
+        print("idUserBarecodereader \(idUser)")
         //femre clavier
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(barcodeReader.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         //okButton.enabled = false
-        okButton.hidden = true
-        okButton.tintColor = UIColor.greenColor()
         
         view.backgroundColor = UIColor.blackColor()
         captureSession = AVCaptureSession()
@@ -110,20 +105,14 @@ class barcodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate, U
     func foundCode(code: String) {
         print(code)
     
-        next(code)
-    }
-    
-    func next(code:String){
-    // Add your own animation code here.
-    
-   // [[self, barcodeReader] barcodeReader:[self Result] animated:NO completion:nil];
-        
-        labelResult.text = code
-        //okButton.enabled = true
-        
-        okButton.hidden = false
+        let resultview = storyboard!.instantiateViewControllerWithIdentifier("resultView") as! result
+        resultview.isbn = code
+        resultview.idUser = self.idUser
+        self.navigationController?.pushViewController(resultview, animated: true)
         
     }
+    
+    
     
     override func prefersStatusBarHidden() -> Bool {
         return true
