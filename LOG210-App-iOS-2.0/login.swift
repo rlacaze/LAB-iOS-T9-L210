@@ -18,6 +18,8 @@ class login: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var labelFailed: UILabel!
     @IBOutlet weak var selecter: UISwitch!
 
+    var strData: NSString = ""
+    
     //func
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +65,6 @@ class login: UIViewController, UITextFieldDelegate {
     func loginApi() -> Bool{
         let loginApi: Bool = checkingApi(identifiant.text!, password: password.text!)
         print("login: \(loginApi)")
-        
         return loginApi
     }
     
@@ -74,14 +75,20 @@ class login: UIViewController, UITextFieldDelegate {
         
         
         if(loginApi() == true){
+            
             if(selecter.on){
-                print("login with gestionnaire")
+                print("login with gestionnaire")                
+                
                 let gestionnaire = self.storyboard?.instantiateViewControllerWithIdentifier("newGestionnaire") as! menuGestionnaire
+                
                 self.navigationController?.pushViewController(gestionnaire, animated: true)
+                
             } else {
                 print("login with student")
                 let liste = storyboard.instantiateViewControllerWithIdentifier("newList") as! viewList
+                liste.idUser = self.strData as String
                 self.navigationController?.pushViewController(liste, animated: true)
+
             }
             
         } else {
@@ -116,10 +123,14 @@ class login: UIViewController, UITextFieldDelegate {
                 print(error)
             } else {
                 //let httpResponse = response as? NSHTTPURLResponse
-                let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-                //print("strData: \(strData)")
-                    if (strData == "true"){
+                self.strData = NSString(data: data!, encoding: NSUTF8StringEncoding)!
+                
+                    //if (strData == "true"){
+                    if (self.strData != ""){
+                        
                         result = true
+                        
+                        print("strData: \(self.strData)")
                         //print("result1: \(result)")
                     } else {
                         result = false

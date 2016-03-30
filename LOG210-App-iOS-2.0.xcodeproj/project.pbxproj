@@ -32,6 +32,7 @@
 		42B2278F1C9FBCD400FA784D /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2278E1C9FBCD400FA784D /* RestApiManager.swift */; };
 		42B227911C9FC61900FA784D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B227901C9FC61900FA784D /* SwiftyJSON.swift */; };
 		42B227931C9FC73F00FA784D /* ViewControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */; };
+		42CAA82C1CAB57C8001A01F7 /* VariableGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAA82B1CAB57C8001A01F7 /* VariableGlobal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		42B2278E1C9FBCD400FA784D /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		42B227901C9FC61900FA784D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAPI.swift; sourceTree = "<group>"; };
+		42CAA82B1CAB57C8001A01F7 /* VariableGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableGlobal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				4212A8E81C8664FF00A19F9B /* Main.storyboard */,
+				42CAA82B1CAB57C8001A01F7 /* VariableGlobal.swift */,
 				42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */,
 				42B227901C9FC61900FA784D /* SwiftyJSON.swift */,
 				42B2278E1C9FBCD400FA784D /* RestApiManager.swift */,
@@ -329,6 +332,7 @@
 				4215481D1C98A284000A4F99 /* aProposController.swift in Sources */,
 				4212A8E51C8664FF00A19F9B /* AppDelegate.swift in Sources */,
 				4212A9351C8FE7A700A19F9B /* remise_validate.swift in Sources */,
+				42CAA82C1CAB57C8001A01F7 /* VariableGlobal.swift in Sources */,
 				421548191C926862000A4F99 /* aProposDetails.swift in Sources */,
 				4212A9151C86659F00A19F9B /* login.swift in Sources */,
 			);

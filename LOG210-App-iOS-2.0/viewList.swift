@@ -9,6 +9,7 @@
 import UIKit
 
 class viewList: UIViewController {
+    var idUser: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,7 @@ class viewList: UIViewController {
         
         //titre nav bar
         self.title = "liste des livres"
+        print("idUserAdd \(idUser)")
         
     }
     
@@ -24,5 +26,10 @@ class viewList: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func nextView(sender: AnyObject) {
+        let liste = storyboard!.instantiateViewControllerWithIdentifier("barecodeReaderID") as! barcodeReader
+        liste.idUser = self.idUser
+        self.navigationController?.pushViewController(liste, animated: true)
+    }
     
 }
