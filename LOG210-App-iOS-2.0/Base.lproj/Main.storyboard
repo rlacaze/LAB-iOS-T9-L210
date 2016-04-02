@@ -289,39 +289,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-Jq-6H5">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="ajouter"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xJ-uI-R3C">
+                                <rect key="frame" x="207" y="388" width="186" height="63"/>
+                                <color key="backgroundColor" red="0.80368420019999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="2aZ-4z-jiH"/>
+                                    <constraint firstAttribute="width" constant="186" id="TRB-5k-0JT">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="63" id="y1V-Sh-XSF">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="AJOUTER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2aZ-4z-jiH"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="nextView:" destination="uOl-mL-KfP" eventType="touchUpInside" id="dhw-Ii-vNK"/>
+                                    <action selector="nextView:" destination="uOl-mL-KfP" eventType="touchUpInside" id="yPu-t2-59B"/>
+                                    <action selector="validerAction:" destination="go8-Dt-RCf" eventType="touchUpInside" id="wV2-PE-hDF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="cGc-Jq-6H5" secondAttribute="bottom" constant="20" symbolic="YES" id="QZN-VN-FFY">
-                                <variation key="heightClass=regular-widthClass=compact" constant="385"/>
-                            </constraint>
-                            <constraint firstItem="cGc-Jq-6H5" firstAttribute="leading" secondItem="rdk-xN-Iw4" secondAttribute="leadingMargin" id="y6W-75-jTb">
-                                <variation key="heightClass=regular-widthClass=compact" constant="156"/>
-                            </constraint>
+                            <constraint firstItem="7xJ-uI-R3C" firstAttribute="centerX" secondItem="rdk-xN-Iw4" secondAttribute="centerX" id="J5v-96-rqD"/>
+                            <constraint firstItem="7xJ-uI-R3C" firstAttribute="centerY" secondItem="rdk-xN-Iw4" secondAttribute="centerY" id="TaE-re-eUE"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="cGc-Jq-6H5"/>
+                                <exclude reference="7xJ-uI-R3C"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="QZN-VN-FFY"/>
-                                <exclude reference="y6W-75-jTb"/>
+                                <exclude reference="J5v-96-rqD"/>
+                                <exclude reference="TaE-re-eUE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="cGc-Jq-6H5"/>
+                                <include reference="7xJ-uI-R3C"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="QZN-VN-FFY"/>
-                                <include reference="y6W-75-jTb"/>
+                                <include reference="J5v-96-rqD"/>
+                                <include reference="TaE-re-eUE"/>
                             </mask>
                         </variation>
                     </view>

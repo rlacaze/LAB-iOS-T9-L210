@@ -77,14 +77,14 @@ class login: UIViewController, UITextFieldDelegate {
         if(loginApi() == true){
             
             if(selecter.on){
-                print("login with gestionnaire")                
+                //print("login with gestionnaire")
                 
                 let gestionnaire = self.storyboard?.instantiateViewControllerWithIdentifier("newGestionnaire") as! menuGestionnaire
                 
                 self.navigationController?.pushViewController(gestionnaire, animated: true)
                 
             } else {
-                print("login with student")
+                //print("login with student")
                 let liste = storyboard.instantiateViewControllerWithIdentifier("newList") as! viewList
                 liste.idUser = self.strData as String
                 self.navigationController?.pushViewController(liste, animated: true)
@@ -130,7 +130,7 @@ class login: UIViewController, UITextFieldDelegate {
                         
                         result = true
                         
-                        print("strData: \(self.strData)")
+                        //print("strData: \(self.strData)")
                         //print("result1: \(result)")
                     } else {
                         result = false

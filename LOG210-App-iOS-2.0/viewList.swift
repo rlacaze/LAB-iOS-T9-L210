@@ -17,7 +17,7 @@ class viewList: UIViewController {
         
         //titre nav bar
         self.title = "liste des livres"
-        print("idUserAdd \(idUser)")
+        //print("idUserAdd \(idUser)")
         
     }
     

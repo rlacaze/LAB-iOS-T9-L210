@@ -19,7 +19,7 @@ class barcodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate, U
         
         //titre nav bar
         self.title = "lecteur code-barre"
-        print("idUserBarecodereader \(idUser)")
+        //print("idUserBarecodereader \(idUser)")
         //femre clavier
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(barcodeReader.dismissKeyboard))
@@ -103,7 +103,7 @@ class barcodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate, U
     }
     
     func foundCode(code: String) {
-        print(code)
+        print("ISBN found: \(code)")
     
         let resultview = storyboard!.instantiateViewControllerWithIdentifier("resultView") as! result
         resultview.isbn = code

@@ -25,7 +25,7 @@ class result: UIViewController {
         //titre nav bar
         self.title = "résultat"
         isbnFieldText.text = isbn
-        print("idUserfinal \(idUser)")
+        //print("idUserfinal \(idUser)")
         
         }
     
@@ -43,7 +43,7 @@ class result: UIViewController {
     }
     
     func checkingApi(identifiant: String, password: String) -> Bool{
-        print("id=\(identifiant) : pass=\(password)")
+        print("isbn=\(isbn) : state=\(etat) : price=\(prix) : nbpages=\(nbPages)")
         var result: Bool = false
         
         let headers = [
@@ -62,11 +62,11 @@ class result: UIViewController {
         
         let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
-                print(error)
+                //print(error)
             } else {
                 //let httpResponse = response as? NSHTTPURLResponse
                 let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-                print("strData: \(strData)")
+                //print("strData: \(strData)")
                 //if (strData == "true"){
                 if (strData != ""){
                     result = true
