@@ -103,7 +103,7 @@ class barcodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate, U
     }
     
     func foundCode(code: String) {
-        print("ISBN found: \(code)")
+        //print("ISBN found: \(code)")
     
         let resultview = storyboard!.instantiateViewControllerWithIdentifier("resultView") as! result
         resultview.isbn = code

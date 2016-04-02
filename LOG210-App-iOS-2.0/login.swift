@@ -56,7 +56,7 @@ class login: UIViewController, UITextFieldDelegate {
         
     }
     
-    //Calls this function when the tap is recognized.
+    //ferme le clavier avec un tap hors du clavier
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
@@ -71,6 +71,7 @@ class login: UIViewController, UITextFieldDelegate {
     //ACTION
     @IBAction func validation(sender: UIButton) {
        
+        self.labelFailed.hidden = true
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         
@@ -126,7 +127,8 @@ class login: UIViewController, UITextFieldDelegate {
                 self.strData = NSString(data: data!, encoding: NSUTF8StringEncoding)!
                 
                     //if (strData == "true"){
-                    if (self.strData != ""){
+                //si la reponse est "" login failed, sinon reponse est "2" pour id=2
+                    if (self.strData != "\"\""){
                         
                         result = true
                         

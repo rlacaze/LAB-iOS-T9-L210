@@ -29,6 +29,7 @@
 		421548191C926862000A4F99 /* aProposDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421548181C926862000A4F99 /* aProposDetails.swift */; };
 		4215481B1C927231000A4F99 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215481A1C927231000A4F99 /* CollectionViewCell.swift */; };
 		4215481D1C98A284000A4F99 /* aProposController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215481C1C98A284000A4F99 /* aProposController.swift */; };
+		42A7CDE21CAF9E5C00B2D2E6 /* FinalViewAddBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDE11CAF9E5C00B2D2E6 /* FinalViewAddBook.swift */; };
 		42B2278F1C9FBCD400FA784D /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2278E1C9FBCD400FA784D /* RestApiManager.swift */; };
 		42B227911C9FC61900FA784D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B227901C9FC61900FA784D /* SwiftyJSON.swift */; };
 		42B227931C9FC73F00FA784D /* ViewControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */; };
@@ -81,6 +82,7 @@
 		421548181C926862000A4F99 /* aProposDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aProposDetails.swift; sourceTree = "<group>"; };
 		4215481A1C927231000A4F99 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4215481C1C98A284000A4F99 /* aProposController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aProposController.swift; sourceTree = "<group>"; };
+		42A7CDE11CAF9E5C00B2D2E6 /* FinalViewAddBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewAddBook.swift; sourceTree = "<group>"; };
 		42B2278E1C9FBCD400FA784D /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		42B227901C9FC61900FA784D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAPI.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				4212A9161C8665B200A19F9B /* viewList.swift */,
 				4212A92A1C87917C00A19F9B /* barcodeReader.swift */,
 				4212A92C1C892E2700A19F9B /* result.swift */,
+				42A7CDE11CAF9E5C00B2D2E6 /* FinalViewAddBook.swift */,
 				4212A8E61C8664FF00A19F9B /* ViewController.swift */,
 				4215481A1C927231000A4F99 /* CollectionViewCell.swift */,
 				4215481C1C98A284000A4F99 /* aProposController.swift */,
@@ -328,6 +331,7 @@
 				4212A8E71C8664FF00A19F9B /* ViewController.swift in Sources */,
 				4212A9311C8FE75800A19F9B /* Remise_search.swift in Sources */,
 				4212A9391C8FE7CD00A19F9B /* cueil_validate.swift in Sources */,
+				42A7CDE21CAF9E5C00B2D2E6 /* FinalViewAddBook.swift in Sources */,
 				4212A9371C8FE7BF00A19F9B /* cueil_liste.swift in Sources */,
 				4215481D1C98A284000A4F99 /* aProposController.swift in Sources */,
 				4212A8E51C8664FF00A19F9B /* AppDelegate.swift in Sources */,
