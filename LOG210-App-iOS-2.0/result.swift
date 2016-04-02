@@ -109,7 +109,7 @@ class result: UIViewController {
             data = checkingApi()
             
             let finalView = storyboard!.instantiateViewControllerWithIdentifier("finalViewAddBookStoryboardID") as! FinalViewAddBook
-            FinalViewAddBook.data = self.data
+            finalView.data = data
             self.navigationController?.pushViewController(finalView, animated: true)
         }
         

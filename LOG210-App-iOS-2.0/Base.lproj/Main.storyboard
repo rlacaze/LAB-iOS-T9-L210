@@ -639,46 +639,6 @@
                     <view key="view" contentMode="scaleToFill" id="hN2-10-Pnu">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Un nouveau livre à été ajouté à votre liste !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3D-iV-KtP">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="39" y="63" width="323" height="60"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCK-xf-NVT">
-                                <rect key="frame" x="207" y="388" width="186" height="63"/>
-                                <color key="backgroundColor" red="0.43398385560000002" green="0.83529411760000005" blue="0.38923776129999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="2Ic-zd-mot"/>
-                                    <constraint firstAttribute="height" constant="63" id="s0y-IT-G4J"/>
-                                    <constraint firstAttribute="width" constant="186" id="xbg-VQ-DtD"/>
-                                    <constraint firstAttribute="width" constant="186" id="yFg-uc-P0R"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="TERMINER">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="s0y-IT-G4J"/>
-                                        <exclude reference="yFg-uc-P0R"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="s0y-IT-G4J"/>
-                                        <exclude reference="xbg-VQ-DtD"/>
-                                        <exclude reference="2Ic-zd-mot"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="addButtonAction:" destination="L5Q-gc-us2" eventType="touchUpInside" id="FrN-RL-QaC"/>
-                                    <action selector="validerAction:" destination="go8-Dt-RCf" eventType="touchUpInside" id="JnQ-Gv-kLi"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt1-0r-egz">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -715,20 +675,61 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCK-xf-NVT">
+                                <rect key="frame" x="207" y="388" width="186" height="63"/>
+                                <color key="backgroundColor" red="0.43398385560000002" green="0.83529411760000005" blue="0.38923776129999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="2Ic-zd-mot"/>
+                                    <constraint firstAttribute="height" constant="63" id="s0y-IT-G4J"/>
+                                    <constraint firstAttribute="width" constant="186" id="xbg-VQ-DtD"/>
+                                    <constraint firstAttribute="width" constant="186" id="yFg-uc-P0R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="TERMINER">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="s0y-IT-G4J"/>
+                                        <exclude reference="yFg-uc-P0R"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="s0y-IT-G4J"/>
+                                        <exclude reference="xbg-VQ-DtD"/>
+                                        <exclude reference="2Ic-zd-mot"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="L5Q-gc-us2" eventType="touchUpInside" id="FrN-RL-QaC"/>
+                                    <action selector="validerAction:" destination="go8-Dt-RCf" eventType="touchUpInside" id="JnQ-Gv-kLi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="67" text="Un nouveau livre à été ajouté à votre liste !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="j3D-iV-KtP">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="60" y="64" width="281" height="67"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o8P-Hk-gaq" firstAttribute="top" secondItem="6Nd-om-y1L" secondAttribute="bottom" constant="8" symbolic="YES" id="0ry-EE-dNf"/>
+                            <constraint firstItem="j3D-iV-KtP" firstAttribute="centerX" secondItem="HCK-xf-NVT" secondAttribute="centerX" id="2BT-gI-jeb"/>
+                            <constraint firstItem="j3D-iV-KtP" firstAttribute="top" secondItem="xab-fd-Nz1" secondAttribute="bottom" constant="43" id="48z-Wg-bmr">
+                                <variation key="heightClass=regular-widthClass=compact" constant="44"/>
+                            </constraint>
                             <constraint firstItem="4JE-TR-HKX" firstAttribute="leading" secondItem="6Nd-om-y1L" secondAttribute="leading" id="7GX-VX-wys"/>
                             <constraint firstItem="icR-N5-9ph" firstAttribute="top" secondItem="9Ii-rs-c9x" secondAttribute="bottom" constant="24" id="8pi-n0-fgo"/>
                             <constraint firstItem="4JE-TR-HKX" firstAttribute="top" secondItem="icR-N5-9ph" secondAttribute="bottom" constant="8" symbolic="YES" id="9NP-5k-qx3"/>
                             <constraint firstItem="Bt1-0r-egz" firstAttribute="top" secondItem="xab-fd-Nz1" secondAttribute="bottom" constant="120" id="D90-H3-H9Y">
                                 <variation key="heightClass=regular-widthClass=compact" constant="158"/>
                             </constraint>
-                            <constraint firstItem="j3D-iV-KtP" firstAttribute="top" secondItem="xab-fd-Nz1" secondAttribute="bottom" constant="31" id="Ls6-OD-yZm">
-                                <variation key="heightClass=regular-widthClass=compact" constant="43"/>
-                            </constraint>
-                            <constraint firstItem="j3D-iV-KtP" firstAttribute="centerX" secondItem="HCK-xf-NVT" secondAttribute="centerX" id="NUI-8m-wqC"/>
+                            <constraint firstItem="j3D-iV-KtP" firstAttribute="centerX" secondItem="hN2-10-Pnu" secondAttribute="centerX" id="JFC-yB-bbP"/>
                             <constraint firstItem="Bt1-0r-egz" firstAttribute="leading" secondItem="hN2-10-Pnu" secondAttribute="leadingMargin" constant="-3" id="Szl-iT-Blw">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -738,28 +739,27 @@
                             <constraint firstItem="HCK-xf-NVT" firstAttribute="leading" secondItem="hN2-10-Pnu" secondAttribute="leadingMargin" constant="87" id="dVr-rj-gyU"/>
                             <constraint firstItem="9Ii-rs-c9x" firstAttribute="leading" secondItem="icR-N5-9ph" secondAttribute="leading" id="eTp-6A-4Cf"/>
                             <constraint firstItem="Bt1-0r-egz" firstAttribute="leading" secondItem="9Ii-rs-c9x" secondAttribute="leading" id="ffa-lB-FLA"/>
-                            <constraint firstItem="j3D-iV-KtP" firstAttribute="centerX" secondItem="hN2-10-Pnu" secondAttribute="centerX" id="rDf-Jw-A8u"/>
                             <constraint firstItem="6Nd-om-y1L" firstAttribute="top" secondItem="4JE-TR-HKX" secondAttribute="bottom" constant="8" symbolic="YES" id="teq-xz-YgI"/>
                             <constraint firstItem="LUV-Ai-Iun" firstAttribute="top" secondItem="HCK-xf-NVT" secondAttribute="bottom" constant="43" id="vOJ-ak-h1c"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="j3D-iV-KtP"/>
-                                <exclude reference="HCK-xf-NVT"/>
                                 <exclude reference="Bt1-0r-egz"/>
                                 <exclude reference="9Ii-rs-c9x"/>
                                 <exclude reference="icR-N5-9ph"/>
                                 <exclude reference="4JE-TR-HKX"/>
                                 <exclude reference="6Nd-om-y1L"/>
                                 <exclude reference="o8P-Hk-gaq"/>
+                                <exclude reference="HCK-xf-NVT"/>
+                                <exclude reference="j3D-iV-KtP"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="2BT-gI-jeb"/>
+                                <exclude reference="48z-Wg-bmr"/>
+                                <exclude reference="JFC-yB-bbP"/>
                                 <exclude reference="D90-H3-H9Y"/>
                                 <exclude reference="Szl-iT-Blw"/>
                                 <exclude reference="ffa-lB-FLA"/>
-                                <exclude reference="Ls6-OD-yZm"/>
-                                <exclude reference="NUI-8m-wqC"/>
-                                <exclude reference="rDf-Jw-A8u"/>
                                 <exclude reference="buW-ib-j9v"/>
                                 <exclude reference="eTp-6A-4Cf"/>
                                 <exclude reference="8pi-n0-fgo"/>
@@ -775,22 +775,22 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="j3D-iV-KtP"/>
-                                <include reference="HCK-xf-NVT"/>
                                 <include reference="Bt1-0r-egz"/>
                                 <include reference="9Ii-rs-c9x"/>
                                 <include reference="icR-N5-9ph"/>
                                 <include reference="4JE-TR-HKX"/>
                                 <include reference="6Nd-om-y1L"/>
                                 <include reference="o8P-Hk-gaq"/>
+                                <include reference="HCK-xf-NVT"/>
+                                <include reference="j3D-iV-KtP"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="2BT-gI-jeb"/>
+                                <include reference="48z-Wg-bmr"/>
+                                <include reference="JFC-yB-bbP"/>
                                 <include reference="D90-H3-H9Y"/>
                                 <include reference="Szl-iT-Blw"/>
                                 <include reference="ffa-lB-FLA"/>
-                                <include reference="Ls6-OD-yZm"/>
-                                <include reference="NUI-8m-wqC"/>
-                                <include reference="rDf-Jw-A8u"/>
                                 <include reference="buW-ib-j9v"/>
                                 <include reference="eTp-6A-4Cf"/>
                                 <include reference="8pi-n0-fgo"/>

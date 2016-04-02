@@ -15,12 +15,34 @@ class FinalViewAddBook: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print(data!)
+        
+        //parseJson(data!)
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+    /*
+    func parseJson(dataBrut: NSString) {
+       
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+            
+            if let blogs = json["blogs"] as? [[String: AnyObject]] {
+                for blog in blogs {
+                    if let name = blog["name"] as? String {
+                        names.append(name)
+                    }
+                }
+            }
+        } catch {
+            print("error serializing JSON: \(error)")
+        }
+        
+        print(names)
+    }*/
 }
