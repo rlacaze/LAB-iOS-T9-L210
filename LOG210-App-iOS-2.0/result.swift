@@ -140,14 +140,14 @@ class result: UIViewController {
             } else {
                 //let httpResponse = response as? NSHTTPURLResponse
                 let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-                print("strData: \(strData)")
+                //print("strData: \(strData)")
                 result = strData
             }
         })
         
         
         dataTask.resume()
-        //sleep(2)
+        sleep(2)
         return result
     }
 }
