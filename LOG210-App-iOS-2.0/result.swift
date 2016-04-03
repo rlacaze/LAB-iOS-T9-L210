@@ -125,7 +125,7 @@ class result: UIViewController {
             "postman-token": "6b9b9816-6dae-aade-504a-9545ec1baef2"
         ]
         
-        let url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_exemplaireLivre/?ISBN=\(isbn!)&Prix=\(prix.text!)&Etat=\(etat)&NombrePages=\(nbPages.text!)&IdUser=\(idUser!)")!
+        let url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_exemplaireLivre/Put_AjoutExemplaire/?ISBN=\(isbn!)&Prix=\(prix.text!)&Etat=\(etat)&NombrePages=\(nbPages.text!)&IdUser=\(idUser!)")!
         
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         

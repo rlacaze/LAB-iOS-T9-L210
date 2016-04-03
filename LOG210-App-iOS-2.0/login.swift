@@ -28,7 +28,7 @@ class login: UIViewController, UITextFieldDelegate {
         
         labelFailed.hidden = true
         load.hidden = true
-        //load.startAnimating()
+        load.startAnimating()
 
         
         //titre nav bar
@@ -81,35 +81,42 @@ class login: UIViewController, UITextFieldDelegate {
     //ACTION
     @IBAction func validation(sender: UIButton) {
        
-        //load.hidden = false
-        viewWillAppear(false)
+        load.hidden = false
         
+        super.viewDidLoad()
+        
+        gestionApi()
+        
+    }
+    
+    
+    func gestionApi(){
         self.labelFailed.hidden = true
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        
+    
+    
         if(loginApi() == true){
-            
-            if(selecter.on){
-                //print("login with gestionnaire")
-                
-                let gestionnaire = self.storyboard?.instantiateViewControllerWithIdentifier("newGestionnaire") as! menuGestionnaire
-                
-                self.navigationController?.pushViewController(gestionnaire, animated: true)
-                
-            } else {
-                //print("login with student")
-                let liste = storyboard.instantiateViewControllerWithIdentifier("newList") as! viewList
-                liste.idUser = self.strData as String
-                self.navigationController?.pushViewController(liste, animated: true)
-
-            }
-            
+    
+        if(selecter.on){
+        //print("login with gestionnaire")
+    
+        let gestionnaire = self.storyboard?.instantiateViewControllerWithIdentifier("newGestionnaire") as! menuGestionnaire
+    
+    self.navigationController?.pushViewController(gestionnaire, animated: true)
+    
         } else {
-            print("login FAILED")
-            labelFailed.textColor = UIColor.redColor()
-            labelFailed.text = "Login FAILED"
-            labelFailed.hidden = false
+        //print("login with student")
+        let liste = storyboard.instantiateViewControllerWithIdentifier("newList") as! viewList
+        liste.idUser = self.strData as String
+        self.navigationController?.pushViewController(liste, animated: true)
+    
+        }
+    
+        } else {
+        print("login FAILED")
+        labelFailed.textColor = UIColor.redColor()
+        labelFailed.text = "Login FAILED"
+        labelFailed.hidden = false
         }
     }
     
@@ -122,7 +129,7 @@ class login: UIViewController, UITextFieldDelegate {
             "postman-token": "6b9b9816-6dae-aade-504a-9545ec1baef2"
         ]
         
-        let url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_user?email=\(identifiant)&password=\(password)")!
+        let url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_user/Post_tbl_exemplaireLivre?email=\(identifiant)&password=\(password)")!
        
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         
