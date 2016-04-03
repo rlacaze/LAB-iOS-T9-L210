@@ -17,6 +17,7 @@ class login: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var validerButton: UIButton!
     @IBOutlet weak var labelFailed: UILabel!
     @IBOutlet weak var selecter: UISwitch!
+    @IBOutlet weak var load: UIActivityIndicatorView!
 
     var strData: NSString = ""
     
@@ -26,7 +27,8 @@ class login: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         labelFailed.hidden = true
-
+        load.hidden = true
+        //load.startAnimating()
 
         
         //titre nav bar
@@ -37,6 +39,13 @@ class login: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        //self.view.addSubview(load)
+        //load.hidden = false
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,11 +75,15 @@ class login: UIViewController, UITextFieldDelegate {
         let loginApi: Bool = checkingApi(identifiant.text!, password: password.text!)
         print("login: \(loginApi)")
         return loginApi
+        
     }
     
     //ACTION
     @IBAction func validation(sender: UIButton) {
        
+        //load.hidden = false
+        viewWillAppear(false)
+        
         self.labelFailed.hidden = true
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -98,7 +111,6 @@ class login: UIViewController, UITextFieldDelegate {
             labelFailed.text = "Login FAILED"
             labelFailed.hidden = false
         }
-        
     }
     
     func checkingApi(identifiant: String, password: String) -> Bool{
@@ -140,11 +152,8 @@ class login: UIViewController, UITextFieldDelegate {
             }
         })
         
-        
         dataTask.resume()
-        
         sleep(2)
-        //usleep(500000)
         return result
     }
 }

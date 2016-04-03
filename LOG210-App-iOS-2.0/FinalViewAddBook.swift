@@ -42,21 +42,24 @@ class FinalViewAddBook: UIViewController {
         //let dataArray: [String]
         
         //let dataArray = dataString.characters.split(",")
-        let dataArray = dataString.componentsSeparatedByString(",")
+        let dataArray = dataString.componentsSeparatedByString("\"")
         
+        /*
         let dataTitre = dataArray[3].componentsSeparatedByString(":")
         let dataAuteur = dataArray[4].componentsSeparatedByString(":")
         let dataNbPages = dataArray[5].componentsSeparatedByString(":")
         let dataPrixNeuf = dataArray[6].componentsSeparatedByString(":")
         let dataIsbn10 = dataArray[7].componentsSeparatedByString(":")
         let dataIsbn13 = dataArray[8].componentsSeparatedByString(":")
-
-        titre.text = dataTitre[1]
-        auteur.text = "par \(dataAuteur[1])"
-        nbPages.text = "\(dataNbPages[1]) pages"
-        prixNeuf.text = " Neuf: \(dataPrixNeuf[1]) $"
-        isbn10.text = " ISBN10: \(dataIsbn10[1])"
-        isbn13.text = " ISBN13: \(dataIsbn13[1])"
+        */
+        
+        
+        titre.text = dataArray[11]
+        auteur.text = "par \(dataArray[15])"
+        nbPages.text = "\(dataArray[19]) pages"
+        prixNeuf.text = "Neuf: \(dataArray[23]) $"
+        isbn10.text = "ISBN10: \(dataArray[27])"
+        isbn13.text = "ISBN13: \(dataArray[31])"
         
         /*
         print(dataTitre[1])
