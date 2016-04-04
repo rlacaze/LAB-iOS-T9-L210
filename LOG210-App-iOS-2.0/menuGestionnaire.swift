@@ -10,6 +10,9 @@ import UIKit
 
 class menuGestionnaire: UIViewController {
     
+    var idUser: String?
+    
+    @IBOutlet weak var remisebutton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,4 +27,10 @@ class menuGestionnaire: UIViewController {
     }
     
     
+    @IBAction func remisebuttonaction(sender: AnyObject) {
+        
+        let listview = self.storyboard?.instantiateViewControllerWithIdentifier("remiseID") as! remise_search2
+        listview.idUser = self.idUser! as String
+        self.navigationController?.pushViewController(listview, animated: true)
+    }
 }
