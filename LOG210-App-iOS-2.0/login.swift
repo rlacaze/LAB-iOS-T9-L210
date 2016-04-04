@@ -81,7 +81,7 @@ class login: UIViewController, UITextFieldDelegate {
     //ACTION
     @IBAction func validation(sender: UIButton) {
        
-        load.hidden = false
+        load.hidden = true
         
         super.viewDidLoad()
         

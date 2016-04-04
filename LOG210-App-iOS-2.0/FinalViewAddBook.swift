@@ -32,6 +32,9 @@ class FinalViewAddBook: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func terminerbouton(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
     
     func parseJson(dataBrut: NSString) {
     

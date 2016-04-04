@@ -33,6 +33,7 @@
 		42A7CDE41CB05D5B00B2D2E6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDE31CB05D5B00B2D2E6 /* SwiftyJSON.swift */; };
 		42A7CDEC1CB20E8300B2D2E6 /* remise_tableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDEB1CB20E8300B2D2E6 /* remise_tableviewcell.swift */; };
 		42A7CDEE1CB22AAE00B2D2E6 /* cueilletteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDED1CB22AAE00B2D2E6 /* cueilletteListView.swift */; };
+		42A7CDF01CB23E1800B2D2E6 /* finalGestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDEF1CB23E1800B2D2E6 /* finalGestionnaireView.swift */; };
 		42B2278F1C9FBCD400FA784D /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2278E1C9FBCD400FA784D /* RestApiManager.swift */; };
 		42B227931C9FC73F00FA784D /* ViewControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */; };
 		42CAA82C1CAB57C8001A01F7 /* VariableGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAA82B1CAB57C8001A01F7 /* VariableGlobal.swift */; };
@@ -88,6 +89,7 @@
 		42A7CDE31CB05D5B00B2D2E6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../Downloads/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		42A7CDEB1CB20E8300B2D2E6 /* remise_tableviewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = remise_tableviewcell.swift; sourceTree = "<group>"; };
 		42A7CDED1CB22AAE00B2D2E6 /* cueilletteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cueilletteListView.swift; sourceTree = "<group>"; };
+		42A7CDEF1CB23E1800B2D2E6 /* finalGestionnaireView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finalGestionnaireView.swift; sourceTree = "<group>"; };
 		42B2278E1C9FBCD400FA784D /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAPI.swift; sourceTree = "<group>"; };
 		42CAA82B1CAB57C8001A01F7 /* VariableGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableGlobal.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				4212A9121C86659000A19F9B /* home.swift */,
 				4212A9141C86659F00A19F9B /* login.swift */,
 				4212A9161C8665B200A19F9B /* viewList.swift */,
+				42A7CDEF1CB23E1800B2D2E6 /* finalGestionnaireView.swift */,
 				4212A92A1C87917C00A19F9B /* barcodeReader.swift */,
 				4212A92C1C892E2700A19F9B /* result.swift */,
 				42A7CDE11CAF9E5C00B2D2E6 /* FinalViewAddBook.swift */,
@@ -334,6 +337,7 @@
 				42A7CDE41CB05D5B00B2D2E6 /* SwiftyJSON.swift in Sources */,
 				4212A9171C8665B200A19F9B /* viewList.swift in Sources */,
 				42A7CDEE1CB22AAE00B2D2E6 /* cueilletteListView.swift in Sources */,
+				42A7CDF01CB23E1800B2D2E6 /* finalGestionnaireView.swift in Sources */,
 				4212A9191C86663400A19F9B /* manuelORtakePhoto.swift in Sources */,
 				4212A8E71C8664FF00A19F9B /* ViewController.swift in Sources */,
 				4212A9311C8FE75800A19F9B /* Remise_search.swift in Sources */,

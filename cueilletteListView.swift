@@ -17,6 +17,8 @@ class cueilletteListView: UIViewController, UITableViewDelegate, UITableViewData
     var dataTitle: [String] = []
     var dataIdExmplaireLivre: [String] = []
     var dataStudentName: [String] = []
+    var dataEtat: [String] = []
+    var dataIdReservation: [String] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -61,9 +63,10 @@ class cueilletteListView: UIViewController, UITableViewDelegate, UITableViewData
         remiseFinalView.dataTitle = self.dataTitle
         remiseFinalView.dataIdExmplaireLivre = self.dataIdExmplaireLivre
         remiseFinalView.studentName = self.dataStudentName
+        remiseFinalView.etat = self.dataEtat
+        remiseFinalView.dataIdReservation = self.dataIdReservation
         self.navigationController?.pushViewController(remiseFinalView, animated: true)
     }
-    
     
     func parseJson(dataBrut: NSString) {
         
@@ -76,11 +79,19 @@ class cueilletteListView: UIViewController, UITableViewDelegate, UITableViewData
         
         var count: Int
         
-        for count = 7; count <= dataArray.count; count = count + 10 {
+        for count = 7; count <= dataArray.count; count = count + 18 {
             dataTitle.append(dataArray[count])
             dataStudentName.append(dataArray[count+4])
             dataIdExmplaireLivre.append(dataArray[count+7])
+            dataIdReservation.append(dataArray[count+9])
+            dataEtat.append(dataArray[count+11])
             nbLivres += 1
+            print("titre: \(dataArray[count])")
+            print("etudiant: \(dataArray[count+4])")
+            print("idexemplaire: \(dataArray[count+7])")
+            print("idreservation: \(dataArray[count+9])")
+            print("etat: \(dataArray[count+11])")
+
         }
         print("\(nbLivres) livres")
     }
@@ -99,6 +110,8 @@ class cueilletteListView: UIViewController, UITableViewDelegate, UITableViewData
         idUser = idUser!.stringByReplacingOccurrencesOfString("\"", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
         let url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_exemplaireLivre/Post_ExemplaireReserver/?IdUser=\(idUser!)")!
+        
+        //let url: NSURL = NSURL(string: "http://livreechangerest20160318115916.azurewebsites.net/api/tbl_exemplaireLivre/Post_ExemplaireReserver/?IdUser=4")!
         
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         

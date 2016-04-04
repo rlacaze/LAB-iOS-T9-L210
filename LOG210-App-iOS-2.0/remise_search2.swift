@@ -16,6 +16,7 @@ class remise_search2: UIViewController, UITableViewDelegate, UITableViewDataSour
     var dataArray: [String] = []
     var dataTitle: [String] = []
     var dataIdExmplaireLivre: [String] = []
+    var dataEtat: [String] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -59,6 +60,7 @@ class remise_search2: UIViewController, UITableViewDelegate, UITableViewDataSour
         remiseFinalView.id = indexPath.row
         remiseFinalView.dataTitle = self.dataTitle
         remiseFinalView.dataIdExmplaireLivre = self.dataIdExmplaireLivre
+        remiseFinalView.dataEtat = self.dataEtat
         self.navigationController?.pushViewController(remiseFinalView, animated: true)
     }
     
@@ -74,9 +76,10 @@ class remise_search2: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         var count: Int
         
-        for count = 7; count <= dataArray.count; count = count + 10 {
+        for count = 7; count <= dataArray.count; count = count + 12 {
             dataTitle.append(dataArray[count])
             dataIdExmplaireLivre.append(dataArray[count+3])
+            dataEtat.append(dataArray[count+5])
             nbLivres += 1
         }
         print("\(nbLivres) livres")
