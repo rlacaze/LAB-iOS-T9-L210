@@ -1,4 +1,12 @@
 //
+//  remise_tableviewcell.swift
+//  LOG210-App-iOS-2.0
+//
+//  Created by Romain LACAZE on 16-04-03.
+//  Copyright © 2016 Romain LACAZE. All rights reserved.
+//
+
+//
 //  remise_search2.swift
 //  LOG210-App-iOS-2.0
 //
@@ -8,16 +16,16 @@
 
 import UIKit
 
-class remise_search2: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class remise_tableviewcell: UITableViewController {
+    @IBOutlet weak var cell: UITableViewCell!
     
     var idUser: String?
     var data: NSString?
+    var items = ["one","two"]
     var nbLivres: Int = 0
     var dataArray: [String] = []
     var dataTitle: [String] = []
-    var dataIdExmplaireLivre: [String] = []
     
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,27 +48,19 @@ class remise_search2: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataTitle.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = self.tableView
-        .dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+            .dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         
         cell.textLabel?.text = dataTitle[indexPath.row]
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let remiseFinalView = self.storyboard?.instantiateViewControllerWithIdentifier("remiseValidateID") as! remise_validate
-        remiseFinalView.idUser = self.idUser! as String
-        remiseFinalView.id = indexPath.row
-        remiseFinalView.dataTitle = self.dataTitle
-        remiseFinalView.dataIdExmplaireLivre = self.dataIdExmplaireLivre
-        self.navigationController?.pushViewController(remiseFinalView, animated: true)
-    }
+    
     
     
     func parseJson(dataBrut: NSString) {
@@ -76,12 +76,11 @@ class remise_search2: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         for count = 7; count <= dataArray.count; count = count + 10 {
             dataTitle.append(dataArray[count])
-            dataIdExmplaireLivre.append(dataArray[count+3])
             nbLivres += 1
         }
         print("\(nbLivres) livres")
     }
-
+    
     
     
     func checkingApi() -> NSString{

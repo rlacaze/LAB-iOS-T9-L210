@@ -31,6 +31,8 @@
 		4215481D1C98A284000A4F99 /* aProposController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215481C1C98A284000A4F99 /* aProposController.swift */; };
 		42A7CDE21CAF9E5C00B2D2E6 /* FinalViewAddBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDE11CAF9E5C00B2D2E6 /* FinalViewAddBook.swift */; };
 		42A7CDE41CB05D5B00B2D2E6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDE31CB05D5B00B2D2E6 /* SwiftyJSON.swift */; };
+		42A7CDEC1CB20E8300B2D2E6 /* remise_tableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDEB1CB20E8300B2D2E6 /* remise_tableviewcell.swift */; };
+		42A7CDEE1CB22AAE00B2D2E6 /* cueilletteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A7CDED1CB22AAE00B2D2E6 /* cueilletteListView.swift */; };
 		42B2278F1C9FBCD400FA784D /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2278E1C9FBCD400FA784D /* RestApiManager.swift */; };
 		42B227931C9FC73F00FA784D /* ViewControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */; };
 		42CAA82C1CAB57C8001A01F7 /* VariableGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAA82B1CAB57C8001A01F7 /* VariableGlobal.swift */; };
@@ -84,6 +86,8 @@
 		4215481C1C98A284000A4F99 /* aProposController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aProposController.swift; sourceTree = "<group>"; };
 		42A7CDE11CAF9E5C00B2D2E6 /* FinalViewAddBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewAddBook.swift; sourceTree = "<group>"; };
 		42A7CDE31CB05D5B00B2D2E6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../Downloads/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
+		42A7CDEB1CB20E8300B2D2E6 /* remise_tableviewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = remise_tableviewcell.swift; sourceTree = "<group>"; };
+		42A7CDED1CB22AAE00B2D2E6 /* cueilletteListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cueilletteListView.swift; sourceTree = "<group>"; };
 		42B2278E1C9FBCD400FA784D /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAPI.swift; sourceTree = "<group>"; };
 		42CAA82B1CAB57C8001A01F7 /* VariableGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableGlobal.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		4212A8D81C8664FF00A19F9B = {
 			isa = PBXGroup;
 			children = (
+				42A7CDED1CB22AAE00B2D2E6 /* cueilletteListView.swift */,
 				4212A8E31C8664FF00A19F9B /* LOG210-App-iOS-2.0 */,
 				4212A8F81C8664FF00A19F9B /* LOG210-App-iOS-2.0Tests */,
 				4212A9031C8664FF00A19F9B /* LOG210-App-iOS-2.0UITests */,
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				4212A8E81C8664FF00A19F9B /* Main.storyboard */,
+				42A7CDEB1CB20E8300B2D2E6 /* remise_tableviewcell.swift */,
 				42CAA82B1CAB57C8001A01F7 /* VariableGlobal.swift */,
 				42B227921C9FC73F00FA784D /* ViewControllerAPI.swift */,
 				42A7CDE31CB05D5B00B2D2E6 /* SwiftyJSON.swift */,
@@ -327,10 +333,12 @@
 				42B227931C9FC73F00FA784D /* ViewControllerAPI.swift in Sources */,
 				42A7CDE41CB05D5B00B2D2E6 /* SwiftyJSON.swift in Sources */,
 				4212A9171C8665B200A19F9B /* viewList.swift in Sources */,
+				42A7CDEE1CB22AAE00B2D2E6 /* cueilletteListView.swift in Sources */,
 				4212A9191C86663400A19F9B /* manuelORtakePhoto.swift in Sources */,
 				4212A8E71C8664FF00A19F9B /* ViewController.swift in Sources */,
 				4212A9311C8FE75800A19F9B /* Remise_search.swift in Sources */,
 				4212A9391C8FE7CD00A19F9B /* cueil_validate.swift in Sources */,
+				42A7CDEC1CB20E8300B2D2E6 /* remise_tableviewcell.swift in Sources */,
 				42A7CDE21CAF9E5C00B2D2E6 /* FinalViewAddBook.swift in Sources */,
 				4212A9371C8FE7BF00A19F9B /* cueil_liste.swift in Sources */,
 				4215481D1C98A284000A4F99 /* aProposController.swift in Sources */,

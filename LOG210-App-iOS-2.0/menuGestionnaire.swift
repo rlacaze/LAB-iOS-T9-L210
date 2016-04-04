@@ -33,4 +33,10 @@ class menuGestionnaire: UIViewController {
         listview.idUser = self.idUser! as String
         self.navigationController?.pushViewController(listview, animated: true)
     }
+    
+    @IBAction func cueillettebuttonaction(sender: AnyObject) {
+        let listview = self.storyboard?.instantiateViewControllerWithIdentifier("cueilletteID") as! cueilletteListView
+        listview.idUser = self.idUser! as String
+        self.navigationController?.pushViewController(listview, animated: true)
+    }
 }
